@@ -7,6 +7,7 @@ import static com.codeborne.selenide.Selenide.$;
 import static com.codeborne.selenide.Selenide.open;
 
 public class StudentRegistrationFormPage {
+    StudentRegistrationFormPage StudentRegistrationFormPage = new StudentRegistrationFormPage();
 
     String firstName = "Vasya",
             lastName = "Vasya",
