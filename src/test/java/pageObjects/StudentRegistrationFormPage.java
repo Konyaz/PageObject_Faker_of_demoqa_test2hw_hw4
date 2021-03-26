@@ -1,6 +1,8 @@
 
 package pageObjects;
 
+import com.github.javafaker.Faker;
+
 import static com.codeborne.selenide.Condition.text;
 import static com.codeborne.selenide.Selectors.byText;
 import static com.codeborne.selenide.Selenide.$;
@@ -8,12 +10,13 @@ import static com.codeborne.selenide.Selenide.open;
 
 public class StudentRegistrationFormPage {
 
+    Faker faker = new Faker();
 
-    String firstName = "Vasya",
-            lastName = "Vasya",
+    String firstName = faker.name().firstName(),
+            lastName = faker.name().lastName(),
             gender = "Male",
-            email = "1@1.com",
-            phone = "9119119119",
+            email = faker.internet().emailAddress(),
+            phone = faker.number().digits(10),
             birthDay = "5",
             birthMonth = "December",
             birthYear = "1900",
@@ -59,7 +62,7 @@ public class StudentRegistrationFormPage {
 
     public void CheckData() {
 
-        $(".table-responsive").shouldHave(text("Vasya Vasya"),
+        $(".table-responsive").shouldHave(text(firstName + " " + lastName),
                 text(email),
                 text(gender),
                 text(phone),
