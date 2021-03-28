@@ -6,8 +6,7 @@ public class StudentRegistrationFormTests {
     StudentRegistrationFormPage studentRegistrationFormPage = new StudentRegistrationFormPage();
 
     @Test
-
-    void successfulFillTest(){
+    void successfulFillTest() {
         studentRegistrationFormPage.openPage();
         studentRegistrationFormPage.FillForm();
         studentRegistrationFormPage.CheckData();
