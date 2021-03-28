@@ -8,9 +8,9 @@ public class StudentRegistrationFormTests {
     @Test
 
     void successfulFillTest(){
-        StudentRegistrationFormPage.openPage();
-        StudentRegistrationFormPage.FillForm();
-        StudentRegistrationFormPage.CheckData();
+        studentRegistrationFormPage.openPage();
+        studentRegistrationFormPage.FillForm();
+        studentRegistrationFormPage.CheckData();
 
     }
 
