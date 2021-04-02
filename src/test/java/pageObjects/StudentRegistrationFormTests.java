@@ -8,8 +8,8 @@ public class StudentRegistrationFormTests {
     @Test
     void successfulFillTest() {
         studentRegistrationFormPage.openPage();
-        studentRegistrationFormPage.FillForm();
-        studentRegistrationFormPage.CheckData();
+        studentRegistrationFormPage.fillForm();
+        studentRegistrationFormPage.checkData();
 
     }
 

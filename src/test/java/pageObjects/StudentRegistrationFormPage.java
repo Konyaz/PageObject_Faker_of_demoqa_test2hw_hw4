@@ -32,7 +32,7 @@ public class StudentRegistrationFormPage {
 
     }
 
-    public void FillForm() {
+    public void fillForm() {
 
         $("#firstName").setValue(firstName);
         $("#lastName").setValue(lastName);
@@ -60,7 +60,7 @@ public class StudentRegistrationFormPage {
 
     }
 
-    public void CheckData() {
+    public void checkData() {
 
         $(".table-responsive").shouldHave(text(firstName + " " + lastName),
                 text(email),
